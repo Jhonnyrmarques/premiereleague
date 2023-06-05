@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-p-table: #9e9e9e;
+
+  --color-title-header: #36003B;
+
+  /* LASTS */
+  --won-color: green;
+  --lost-color: red;
+  --tied-color: #ccc;
+
+  /* Competitions */
+  --champions-color: #0D4172;
+  --europa-color: #FFA032;
+  --conference-color: #00BD13;
+  --championship-color: #E2505B;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+header #logo {
+  width: 190px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 6rem 0;
+}
+
+.title-head{
+  color: var(--color-title-header);
+}
+
+.hide{
+  opacity: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.divisor{
+  margin-top: 2rem;
+  width: 100%;
+  border: 1px solid #ebe9e9;
+}
+
+/* COMPETIÇÕES */
+.championships{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.champ img, .euro img, .conference img{
+  width: 100px;
+  height: 100px;
+}
+
+
+.championship img {
+  width: 160px;
+  height: 100px;
+}
+
+.champ{
+  margin-top: 20rem;
+}
+
+.euro{
+  margin-top: 10rem;
+}
+
+.conference{
+  margin-top: 4rem;
+}
+
+.championship{
+  margin-top: 82rem;
+}
+
+.information-table{
+  display: flex;
+  justify-content: center;
+}
+
+/* TABELA */
+.table-infos{
+   max-width: 50%;
+}
+
+table {
+  margin-top: 2rem;
+  border-collapse: collapse;
+  width: 100%;
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+}
+
+table th {
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+
+table tr:nth-child(odd) {
+  background: #e7e7e7;
+}
+
+table tr{
+  background: #EEE;
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.team, td.name, td.club {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+tbody tr:nth-child(-n +4) .position{
+  border-left: 2px solid var(--champions-color);
+}
+
+tbody tr:nth-child(5) .position, tr:nth-child(6) .position{
+  border-left: 2px solid var(--europa-color);
+}
+
+
+tbody tr:nth-child(7) .position{
+  border-left: 2px solid var(--conference-color);
+}
+
+tbody tr:nth-last-child(-n +3) .position{
+  border-left: 2px solid var(--championship-color);
+}
+
+
+td.team img, td.name img, td.club img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+}
+
+td.name img{
+  border-radius: 50%;
+}
+
+td.team a {
+  text-decoration: none;
+}
+
+
+td p {
+  text-transform: uppercase;
+  color: var(--color-p-table);
+  font-weight: bold;
+}
+
+/* RESULTADOS DOS ULTIMOS JOGOS */
+.won {
+  background: var(--won-color);
+}
+
+.lost {
+  background: var(--lost-color);
+}
+
+.tied{
+  background: var(--tied-color);
+}
+
+.form{
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 0.2rem;
+  
+}
